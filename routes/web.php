@@ -23,3 +23,5 @@ Route::get('/candidats/liste',[CandidatController::class,'liste'])->name('liste.
 Route::get('/electeur/ajouter',[ElecteurController::class,'create'])->name('ajouter.electeur');
 Route::post('/electeur/ajouté', [ElecteurController::class,'store'])->name('store.electeur');
 Route::get('/electeurs/liste',[ElecteurController::class,'liste'])->name('liste.electeur');
+Route::get('/electeur/edit/{id}',[ElecteurController::class,'edit'])->name('edit.electeur');
+Route::post('/electeurupdate/{id}',[ElecteurController::class,'update'])->name('update.electeur');

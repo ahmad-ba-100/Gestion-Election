@@ -16,6 +16,6 @@ class Electeur extends Model
         'candidat_id'
     ];
      public function candidat(){
-        return $this->belongTo(Candidat::class);
+        return $this->belongsTo(Candidat::class);
     }
 }

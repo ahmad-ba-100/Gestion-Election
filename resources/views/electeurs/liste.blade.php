@@ -30,10 +30,10 @@
             <td> {{$electeurs->prenom}}</td>
             <td> {{$electeurs->nom}}</td>
             <td> {{$electeurs->cni}}</td>
-            <td> {{$electeurs->candidat_id}}</td>
+            <td> {{$electeurs->candidat->prenom}} {{$electeurs->candidat->nom}}</td>
            
             <td> 
-                <a href="#" class="btn btn-warning">Modifier</a>
+                <a href="{{route('edit.electeur',$electeurs->id)}}" class="btn btn-warning">Modifier</a>
                 <a onclick="return confirm('voulez-vous vraiment supprimer ce candidat ?');" href="#" class="btn btn-success">Supprimer</a>
                 
             </td>

@@ -61,6 +61,9 @@ class ElecteurController extends Controller
     public function edit(string $id)
     {
         //
+        $electeur = Electeur::find($id);
+        $candidat = Candidat::All();
+        return view('electeurs.edit',compact('electeur'),compact('candidat'));
     }
 
     /**
@@ -69,6 +72,17 @@ class ElecteurController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $electeur = Electeur::find($id);
+
+        $electeur->prenom =$request->prenom;
+        $electeur->nom =$request->nom;
+        $electeur->cni =$request->cni;
+        $electeur->candidat_id =$request->candidat_id;
+        $electeur->update();
+        return redirect()->back()->with('success', 'Electeur modifié avec success');
+
+
+
     }
 
     /**
@@ -80,8 +94,8 @@ class ElecteurController extends Controller
     }
     public function liste(){
         $electeur = Electeur::All();
-        $candidat = Candidat::All();
-       
-        return view('electeurs.liste', compact('electeur'),compact('candidat'));
+        
+    
+        return view('electeurs.liste', compact('electeur'));
     }
 }

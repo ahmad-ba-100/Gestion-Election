@@ -11,6 +11,6 @@ class Candidat extends Model
     //
     protected $guarded = [];
     public function electeur(){
-        return  $this->hasMany(Candidat::Class);
+        return  $this->hasMany(Electeur::class);
     }
 }

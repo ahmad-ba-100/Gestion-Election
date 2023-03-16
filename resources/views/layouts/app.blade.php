@@ -34,8 +34,8 @@
           GESTION ELECTEURS
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">AJOUTER</a>
-          <a class="dropdown-item" href="#">LISTE</a>
+          <a class="dropdown-item" href="{{route('ajouter.electeur')}}">AJOUTER</a>
+          <a class="dropdown-item" href="{{route('liste.electeur')}}">LISTE</a>
           
       </li>
     

@@ -13,8 +13,8 @@
     <div class="card">
         <div class="card-header bg-info text-white"> Modifier un electeur </div>
         <div class="card-body">
-        <form action="{{ route('update.electeur',$electeur->id ) }}" method="post">
-            @csrf
+            <form action="{{ route('update.electeur',$electeur->id ) }}" method="post">
+                @csrf
 
                 <div class="form-group">
                     <label class="form-label" for="name">Prénom:</label>
@@ -39,7 +39,7 @@
                     <select name="candidat_id" class="form-control" aria-label="Default select example">
                         @foreach($candidat as $candidats)
 
-                        <option value="{{$candidats->id}}"  {{ $candidats->id === $electeur->candidat_id ? "selected" : "" }}>{{$candidats->nom}} {{$candidats->prenom}}</option>
+                        <option value="{{$candidats->id}}" {{ $candidats->id === $electeur->candidat_id ? "selected" : "" }}>{{$candidats->nom}} {{$candidats->prenom}}</option>
 
                         @endforeach
                     </select>
